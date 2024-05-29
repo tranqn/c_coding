@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/namqu/Desktop/Neuer Ordner/Chapter03_ControlFlow/_Exercise",
-      "program": "c:/Users/namqu/Desktop/Neuer Ordner/Chapter03_ControlFlow/_Exercise/build/Debug/outDebug",
+      "cwd": "c:/Users/namqu/Desktop/c_coding/lvl_1/project_1",
+      "program": "c:/Users/namqu/Desktop/c_coding/lvl_1/project_1/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

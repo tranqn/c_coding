@@ -1,10 +1,30 @@
-int Minimum(int a, int b)
+#include <stdio.h>
+#include "Lib.h"
+
+int getNumberFromUser()
+{
+    int number_from_user;
+
+    printf("Pls enter a interger number!\n");
+    scanf("%d", &number_from_user);
+
+    return number_from_user;
+}
+
+int minimum_c(int a, int b)
 {
     if(a > b)
     {
         return b;
     }
-    else if(a == b)
+    else{
+        return a;
+    }
+}
+
+int maximum_c(int a, int b)
+{
+    if(a > b)
     {
         return a;
     }
@@ -13,22 +33,9 @@ int Minimum(int a, int b)
     }
 }
 
-int Maximum(int a, int b)
+float mean_c(int a, int b)
 {
-    if(a > b)
-    {
-        return a;
-    }
-    else if(a == b)
-    {
-        return a;
-    }
-    else{
-        return b;
-    }
-}
+    float result = (a + b) / 2.0f;
 
-float Mean(int a, int b)
-{
-    return (a + b) / 2;
+    return result;
 }
