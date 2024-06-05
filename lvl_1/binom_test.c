@@ -23,4 +23,8 @@ int main()
     printf("binom (a + b)^2 is = %d\n",c);
 
     return 0;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 4f804f554fb045db170fe1ed8fe82a16ac6a94f8
