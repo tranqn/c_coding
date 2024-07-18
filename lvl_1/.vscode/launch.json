@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/namqu/Desktop/c_coding/lvl_1/project_2",
-      "program": "c:/Users/namqu/Desktop/c_coding/lvl_1/project_2/build/Debug/outDebug",
+      "cwd": "c:/Users/namqu/Desktop/c_coding/lvl_1/pointerarray",
+      "program": "c:/Users/namqu/Desktop/c_coding/lvl_1/pointerarray/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "TQ.h"
 
 int getNumberFromUser()
@@ -79,4 +80,81 @@ float meanArray(int *a, int len){
     result = total / len;
 
     return result;
+}
+
+int *createArray(unsigned int length, int value )
+{
+    int *array = (int *)malloc(length * sizeof(int));
+
+    if (array == NULL)
+    {
+        return NULL;
+    } 
+
+    for (unsigned int i  = 0; i < length; i++)
+    {
+        array[i] = value;
+    }
+
+    return array;
+}
+
+void printArray(int *array, unsigned int length)
+{
+    for(unsigned int i = 0; i < length; i++)
+    {
+        printf("%d\t", array[i]);    
+    }
+    printf("\n");
+}
+
+int *freeArray(int *array)
+{
+    if (array != NULL)
+    {
+        free(array);
+    }
+
+    return NULL;
+}
+
+int **createMatrix(unsigned int num_rows, unsigned int num_cols, int value)
+{
+    int **matrix = (int **)malloc(num_rows * sizeof(int *));
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = createArray(num_cols, value);
+    }
+
+    return matrix;
+}
+
+void printMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols)
+{
+    if(matrix == NULL)
+    {
+        return;
+    }
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        if(matrix[i] == NULL)
+        {
+            continue;
+        }
+        printArray(matrix[i], num_cols);
+    }
+    printf("\n");
+}
+
+int **freeMatrix(int **matrix, unsigned int num_rows)
+{
+    for(unsigned int i = 0; i < num_rows; i++)
+    {
+        matrix[i] = freeArray(matrix[i]);
+    }
+
+    free(matrix);
+    return NULL;
 }
