@@ -36,7 +36,7 @@ int maximum_c(int a, int b)
 
 float mean_c(int a, int b)
 {
-    float result = (a + b) / 2.0f;
+    float result = ((float)(a + b)) / 2.0f;
 
     return result;
 }
@@ -76,7 +76,7 @@ float meanArray(int *a, int len){
     {
         total = total + a[i];
     }
-    
+
     result = total / len;
 
     return result;
@@ -89,7 +89,7 @@ int *createArray(unsigned int length, int value )
     if (array == NULL)
     {
         return NULL;
-    } 
+    }
 
     for (unsigned int i  = 0; i < length; i++)
     {
@@ -103,7 +103,7 @@ void printArray(int *array, unsigned int length)
 {
     for(unsigned int i = 0; i < length; i++)
     {
-        printf("%d\t", array[i]);    
+        printf("%d\t", array[i]);
     }
     printf("\n");
 }
@@ -157,4 +157,21 @@ int **freeMatrix(int **matrix, unsigned int num_rows)
 
     free(matrix);
     return NULL;
+}
+
+int **transposeMatrix(int **p_matrix,
+                      unsigned int num_rows,
+                      unsigned int num_cols)
+{
+    int **p_matrix_transpose = createMatrix(num_cols, num_rows, 0);
+
+    for (unsigned int i = 0; i < num_rows; i++)
+    {
+        for (unsigned int j = 0; j < num_cols; j++)
+        {
+            p_matrix_transpose[j][i] = p_matrix[i][j];
+        }
+    }
+
+    return p_matrix_transpose;
 }

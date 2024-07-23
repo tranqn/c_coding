@@ -27,4 +27,5 @@ void printMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols);
 
 int **freeMatrix(int **matrix, unsigned int num_rows);
 
+int **transposeMatrix(int **matrix, unsigned int num_rows, unsigned int num_cols);
 #endif

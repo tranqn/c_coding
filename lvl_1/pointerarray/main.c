@@ -12,18 +12,20 @@ int main()
     int value = 1;
 
     int *array = createArray(cols, value);
-
     printArray(array, cols);
     printf("\n");
 
+    int **matrix = createMatrix(rows,cols,value);
+    printMatrix(matrix,rows,cols);
+    printf("\n");
+
+    int **tp_matrix = transposeMatrix(matrix, cols, rows);
+    printMatrix(tp_matrix, cols, rows);
+    printf("\n");
+
+    tp_matrix = freeMatrix(tp_matrix, cols);
+    matrix = freeMatrix(matrix, rows);
     array = freeArray(array);
 
-    int **matrix = createMatrix(rows,cols,value);
-
-    printMatrix(matrix,rows,cols);
-
-    matrix = freeMatrix(matrix, rows);
-
     return 0;
-
 }
